@@ -1,11 +1,13 @@
 <template>
   <article>
-    <h1>{{ post.title }}</h1>
-    <div class="author-block">
-      <img width="80" :src="post.author.img" :alt="post.author.alt" />
-      <div>
-        <h3>Posted by {{ post.author.name }}</h3>
-        <h4>Last updated: {{ formatDate(post.updatedAt) }}</h4>
+    <div class="post-header-wrapper">
+      <h1>{{ post.title }}</h1>
+      <div class="author-block">
+        <img width="80" :src="post.author.img" :alt="post.author.alt" />
+        <div>
+          <h3>Posted by {{ post.author.name }}</h3>
+          <h4>Last updated: {{ formatDate(post.updatedAt) }}</h4>
+        </div>
       </div>
     </div>
     <nuxt-content class="content" :document="post" />
@@ -29,10 +31,17 @@ export default {
 </script>
 
 <style>
+h1 {
+  line-height: 1.5;
+}
 h2,
 p {
   margin-bottom: 1em;
   line-height: 1.5;
+}
+
+.post-header-wrapper {
+  margin: 1em;
 }
 
 .author-block {
@@ -49,5 +58,6 @@ p {
   padding: 1rem;
   border: 1px solid #8fd5a6;
   border-radius: 10px;
+  margin: 0.5em;
 }
 </style>
