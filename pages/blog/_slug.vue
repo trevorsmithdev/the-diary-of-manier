@@ -1,7 +1,14 @@
 <template>
   <article>
-    <p>Post last updated: {{ formatDate(post.updatedAt) }}</p>
-    <nuxt-content :document="post" />
+    <h1>{{ post.title }}</h1>
+    <div class="author-block">
+      <img width="80" :src="post.author.img" :alt="post.author.alt" />
+      <div>
+        <h3>Posted by {{ post.author.name }}</h3>
+        <h4>Last updated: {{ formatDate(post.updatedAt) }}</h4>
+      </div>
+    </div>
+    <nuxt-content class="content" :document="post" />
     <pre> {{ post }} </pre>
   </article>
 </template>
@@ -13,7 +20,6 @@ export default {
     return { post }
   },
   methods: {
-    // eslint-disable-next-line object-shorthand
     formatDate: function (date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
@@ -23,11 +29,25 @@ export default {
 </script>
 
 <style>
-h1,
 h2,
-h3,
-h4,
 p {
   margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.author-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.author-block > * {
+  padding: 0 0.5rem;
+}
+
+.content {
+  padding: 1rem;
+  border: 1px solid #8fd5a6;
+  border-radius: 10px;
 }
 </style>

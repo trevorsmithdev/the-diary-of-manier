@@ -1,4 +1,10 @@
-# A Word of Advice from Manier
+---
+title: A Word of Advice from Manier
+author:
+  name: Manier 
+  img: /manier.png
+  alt: A pixel-art representation of Manier, The Gold-Maker
+---
 
 Don't listen to me.
 
