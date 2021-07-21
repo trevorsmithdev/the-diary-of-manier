@@ -12,7 +12,6 @@ export default {}
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #521945;
   color: #eaf2ef;
   padding: 1rem;
 }

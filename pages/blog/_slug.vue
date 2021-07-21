@@ -11,7 +11,7 @@
       </div>
     </div>
     <nuxt-content class="content" :document="post" />
-    <pre> {{ post }} </pre>
+    <!-- <pre> {{ post }} </pre> -->
   </article>
 </template>
 
