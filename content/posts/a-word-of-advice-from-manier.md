@@ -1,5 +1,6 @@
 ---
 title: A Word of Advice from Manier
+slug: a-word-of-advice-from-manier
 author:
   name: Manier 
   img: /manier.png
@@ -7,6 +8,7 @@ author:
 ---
 
 Don't listen to me.
+<!--more-->
 
 Seriously, I don't know what I'm doing. Rather, I hope this diary will serve as an example of how NOT to do things when it comes to making gold in Classic World of Warcraft. Sometimes knowning what not to do is infinitely more useful than trying to discern the "right" thing to do.
 

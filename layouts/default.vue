@@ -25,6 +25,12 @@ header {
   padding: 1rem;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 header nav {
   margin-left: auto;
 }
@@ -45,6 +51,11 @@ main {
   background-color: var(--mint-cream-10);
   max-width: 800px;
   margin: auto;
+  padding: 1rem;
+}
+
+main h2 {
+  color: #521945;
 }
 
 .margin-auto {

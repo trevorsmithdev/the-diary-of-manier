@@ -2,6 +2,7 @@
     --magenta-50: #912F56;
     --mint-cream-10: #EAF2EF;
     --rich-black-100: #0D090A;
+    --purple-70: #361f27;
 }
 
 html {
@@ -35,5 +36,5 @@ html {
   
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
