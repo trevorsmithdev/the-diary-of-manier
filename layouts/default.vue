@@ -4,9 +4,27 @@
       <h1>The Diary of Manier</h1>
       <nav>
         <ul>
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
-          <li><nuxt-link to="/about">About</nuxt-link></li>
+          <li>
+            <book-svg
+              v-if="isViewingPath()"
+              style="fill: white; height: 1em"
+              class="icon"
+            /><nuxt-link to="/"><span>Home</span></nuxt-link>
+          </li>
+          <li>
+            <book-svg
+              v-if="isViewingPath('/blog')"
+              style="fill: white; height: 1em"
+              class="icon"
+            /><nuxt-link to="/blog"><span>Blog</span></nuxt-link>
+          </li>
+          <li>
+            <book-svg
+              v-if="isViewingPath('/about')"
+              style="fill: white; height: 1em"
+              class="icon"
+            /><nuxt-link to="/about"><span>About</span></nuxt-link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -15,6 +33,20 @@
     </main>
   </div>
 </template>
+
+<script>
+import BookSvg from '@/assets/icons/book.svg'
+export default {
+  components: {
+    BookSvg,
+  },
+  methods: {
+    isViewingPath(path = '/') {
+      return this.$route.path === path
+    },
+  },
+}
+</script>
 
 <style>
 header {
@@ -38,7 +70,19 @@ header nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 2.5em;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li .icon {
+  fill: var(--mint-cream-10);
+  height: 1em;
+  position: absolute;
+  left: -1.4rem;
+  top: 1px;
 }
 
 nav ul li a {
